@@ -21,7 +21,7 @@ para incorporar as regras gramaticais da linguagem especificada a seguir.
 
 <var-declaration> ::= <type-specifier> ID ; 
 
-<type-specifier> ::= int | void
+<type-specifier> ::= int 
 
 ```
 
