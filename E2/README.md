@@ -21,7 +21,7 @@ para incorporar as regras gramaticais da linguagem especificada a seguir.
 
 <var-declaration> ::= <type-specifier> ID ; 
 
-<type-specifier> ::= int 
+<type-specifier> ::= INT | VOID
 
 <const-declaration> ::= CONST <type-specifier> ID = NUM ;
 
