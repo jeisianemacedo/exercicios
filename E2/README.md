@@ -17,11 +17,13 @@ para incorporar as regras gramaticais da linguagem especificada a seguir.
 
 <declaration-list> ::= <declaration-list> <declaration> | <declaration>
 
-<declaration> ::= <var-declaration> 
+<declaration> ::= <var-declaration> | <const-declaration> 
 
 <var-declaration> ::= <type-specifier> ID ; 
 
 <type-specifier> ::= int 
+
+<const-declaration> ::= CONST <type-specifier> ID = NUM ;
 
 ```
 
@@ -62,7 +64,7 @@ Adaptação com base no material cedido pelo Prof. Vinicius Petrucci.
 
 ```
 // exemplo.e1
-// programa na linguagem E1 sem erros léxicos 
+// programa na linguagem E1 sem erros léxicos nem sintáticos
 // palavras-chave: const int return void
 // simbolos: +  -  *  /  =  ;   (  )
 
@@ -86,7 +88,10 @@ cc -o e1 lex.yy.c e1.tab.c
 ./e1 < exemplo.e1
 ```
 
-__ATENÇÃO__: o arquivo exemplo.out colocado na pasta mostra a saída 
- retornada pelo analisador léxico ainda _incompleto_.
+## Saída esperada
 
+Reportar:
+- Sem erros sintáticos, ou
+- Erro léxico (indicar a linha do programa), ou 
+- Erro sintático (indicar a linha do programa).
 
