@@ -12,6 +12,52 @@ para incorporar as regras gramaticais da linguagem especificada a seguir.
 
 ## Aspectos Sintáticos
 
+```
+<program> ::= <declaration-list> <compound-stmt>
+
+<declaration-list> ::= <declaration-list> <declaration> | <declaration>
+
+<declaration> ::= <var-declaration> 
+
+<var-declaration> ::= <type-specifier> ID ; 
+
+<type-specifier> ::= int | void
+
+```
+
+```
+<compound-stmt> ::= <local-declarations> <statement-list> 
+
+<local-declarations> ::= <local-declarations> <var-declaration> | empty
+
+<statement-list> ::= <statement-list> <statement> | empty
+
+<statement> ::= <expression-stmt> | <return-stmt>
+
+<expression-stmt> ::= <expression> ; | ;
+
+<return-stmt> ::= return ; | return <expression> ;
+
+```
+
+```
+<expression> ::= ID = <additive-expression>
+
+<additive-expression> ::= <additive-expression> <addop> <term> | <term>
+
+<addop ::= + | -
+
+<term> ::= <term> <mulop> <factor> | <factor>
+
+<mulop> ::= * | /
+
+<factor> ::= ( <expression> ) | ID | NUM
+
+```
+
+-----
+Adaptação com base no material cedido pelo Prof. Vinicius Petrucci.
+
 ## Exemplo de um programa na linguagem E1
 
 ```
