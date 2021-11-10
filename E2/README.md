@@ -66,19 +66,19 @@ Adaptação com base no material cedido pelo Prof. Vinicius Petrucci.
 // exemplo.e1
 // programa na linguagem E1 sem erros léxicos nem sintáticos
 // palavras-chave: const int return void
-// simbolos: +  -  *  /  =  ;   (  )
+// simbolos: +  -  *  /  =  ;   (  ) { }   // ERRATA
 
     const int b = 25;  
     int c; 
     int q1;
-    {                 // ERRATA: com {
+    {                 // ERRATA: inserindo {
       int a_bar;
 
       a_bar = 40;
       c = b*b + a_bar;
 
       return q1 = c / (c-a);
-    }                // ERRATA: com }
+    }                // ERRATA: fechando com }
 ```
 
 ## Execução e teste
