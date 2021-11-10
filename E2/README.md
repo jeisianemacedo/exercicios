@@ -28,7 +28,7 @@ para incorporar as regras gramaticais da linguagem especificada a seguir.
 ```
 
 ```
-<compound-stmt> ::= <local-declarations> <statement-list> 
+<compound-stmt> ::= { <local-declarations> <statement-list> } 
 
 <local-declarations> ::= <local-declarations> <var-declaration> | empty
 
