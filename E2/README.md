@@ -68,15 +68,17 @@ Adaptação com base no material cedido pelo Prof. Vinicius Petrucci.
 // palavras-chave: const int return void
 // simbolos: +  -  *  /  =  ;   (  )
 
-    int a_bar;
-    const int b = 25;
+    const int b = 25;  
     int c; 
     int q1;
+    {                 // ERRATA: com {
+      int a_bar;
 
-    a_bar = 40;
-    c = b*b + a_bar;
+      a_bar = 40;
+      c = b*b + a_bar;
 
-    return q1 = c / (c-a);
+      return q1 = c / (c-a);
+    }                // ERRATA: com }
 ```
 
 ## Execução e teste
