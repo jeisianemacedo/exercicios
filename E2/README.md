@@ -28,11 +28,11 @@ para incorporar as regras gramaticais da linguagem especificada a seguir.
 ```
 
 ```
-<compound-stmt> ::= { <local-declarations> <statement-list> } 
+<compound-stmt> ::= { <local-declarations> <statement-list> }        // ERRATA: com chaves
 
-<local-declarations> ::= <local-declarations> <var-declaration> | empty
+<local-declarations> ::= <local-declarations> <var-declaration> |  /* empty */
 
-<statement-list> ::= <statement-list> <statement> | empty
+<statement-list> ::= <statement-list> <statement> | /* empty */
 
 <statement> ::= <expression-stmt> | <return-stmt>
 
